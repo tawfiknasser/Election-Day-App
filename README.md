@@ -23,4 +23,10 @@ ________
 (who and what are we aiming for, why ... )
 [Image Here](https://user-images.githubusercontent.com/36166288/45060191-9b84d180-b0a7-11e8-8414-43f603b390f1.jpeg)
 ________
+### Designing it
+![selection_014](https://user-images.githubusercontent.com/36166288/45060602-41850b80-b0a9-11e8-8bfd-5fedd93e8873.png)
 
+In our first designing step, 
+we used figma to estimate how our app is going to be.
+[check our first issue](https://github.com/tawfiknasser/Election-Day-App/issues/1) 
+_________
