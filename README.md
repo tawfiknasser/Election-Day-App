@@ -27,6 +27,6 @@ ________
 ![selection_014](https://user-images.githubusercontent.com/36166288/45060602-41850b80-b0a9-11e8-8bfd-5fedd93e8873.png)
 
 In our first designing step, 
-we used figma to estimate how our app is going to be.
+we used figma to estimate how our app is going to look.
 [check our first issue](https://github.com/tawfiknasser/Election-Day-App/issues/1) 
 _________
