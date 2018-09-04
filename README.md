@@ -19,3 +19,8 @@ the app provide them fast flow of data, real time statistics and less human reso
 
 there is more affects and problems that this app provide and solve.
 ________
+### Empathise & define with stickers : 
+(who and what are we aiming for, why ... )
+[Image Here](https://user-images.githubusercontent.com/36166288/45060191-9b84d180-b0a7-11e8-8414-43f603b390f1.jpeg)
+________
+
