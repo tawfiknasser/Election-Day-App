@@ -5,6 +5,9 @@
 -  Platform for client party cadres. so it make it easier for them to know their tasks and where they stand in the middle of the busy day, it could include SMS (on the app). 
 
 ________
+This is final project,
+done at the end of the  highly selective full stack course.
+Founders and coders, free coding intensive boot camp.
 
  [
 Link to the main issue](https://github.com/foundersandcoders/nazareth-project-leads/issues/13)
