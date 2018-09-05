@@ -11,7 +11,7 @@ done at the end of the  highly selective full stack course.
 [Founders and coders,](https://foundersandcoders.com) free coding intensive boot camp.
 
  [
-Link to the main issue](https://github.com/foundersandcoders/nazareth-project-leads/issues/13)
+Link at the main issue](https://github.com/foundersandcoders/nazareth-project-leads/issues/13)
 ________
 ### What problems this app solve ?
 Different parties try to estimate the result before the day end,
