@@ -7,7 +7,8 @@
 ________
 This is final project,
 done at the end of the  highly selective full stack course.
-Founders and coders, free coding intensive boot camp.
+
+[Founders and coders,](https://foundersandcoders.com) free coding intensive boot camp.
 
  [
 Link to the main issue](https://github.com/foundersandcoders/nazareth-project-leads/issues/13)
@@ -26,10 +27,50 @@ ________
 (who and what are we aiming for, why ... )
 [Image Here](https://user-images.githubusercontent.com/36166288/45060191-9b84d180-b0a7-11e8-8414-43f603b390f1.jpeg)
 ________
-### Designing it
+### Sketching it
+> [Sketching](https://medium.com/@yedantao/sketching-it-41c210ca9a90) is not a ultimate purpose. The purpose is thinking during sketching. 
+
 ![selection_014](https://user-images.githubusercontent.com/36166288/45060602-41850b80-b0a9-11e8-8bfd-5fedd93e8873.png)
 
 In our first designing step, 
 we used figma to estimate how our app is going to look.
-[check our first issue](https://github.com/tawfiknasser/Election-Day-App/issues/1) 
-_________
+[check our first issue](https://github.com/tawfiknasser/Election-Day-App/issues/1) .
+
+designing it on figma allows us to prototype and test it on clients before diving into the code.
+
+excellent UX means excellent product.
+
+
+________
+
+### Different Views (Different users type)
+basically there will be four different types of users.
+_you can look over them on figma_
+ ![selection_015](https://user-images.githubusercontent.com/36166288/45102481-85722200-b136-11e8-8852-cac4b707926d.png)
+ 
+_B stands for box,R for region,M for master)_
+
+##### UserOnBox :
+each UserOnBox is in charge of entering the data,
+on the box he got assigned on,
+for everyone who commit to vote.
+this view contain search input and the search results as boxes so he can find & tic who is voting easily.
+
+##### UserOnRegion :
+each UserOnRegion is in charge of managing the data in group of boxes,
+call their followers who didn't vote, 
+and other tasks.
+this view got a list of all the voters divided by priorty.
+
+##### UserOnMaster : 
+Master view,
+besides his access to any region view ,
+he also got more advanced statistics, graphs and numbers.
+he can send SMS's to the regions and seperated users on tasks.
+
+##### UserOnTask :
+_Later..._
+_____
+### Database schema
+For designig our database schema we are using [DB designer](https://www.dbdesigner.net) tool.
+
