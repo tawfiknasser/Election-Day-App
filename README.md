@@ -11,7 +11,7 @@ done at the end of the  highly selective full stack course.
 [Founders and coders,](https://foundersandcoders.com) free coding intensive boot camp.
 
  [
-Link at the main issue](https://github.com/foundersandcoders/nazareth-project-leads/issues/13)
+Link for the main issue](https://github.com/foundersandcoders/nazareth-project-leads/issues/13)
 ________
 ### What problems this app solve ?
 Different parties try to estimate the result before the day end,
@@ -37,8 +37,10 @@ we used figma to estimate how our app is going to look.
 [check our first issue](https://github.com/tawfiknasser/Election-Day-App/issues/1) .
 
 designing it on figma allows us to prototype and test it on clients before diving into the code.
+![twoguystesting](https://user-images.githubusercontent.com/36166288/45123162-a48ca600-b16e-11e8-890d-dfe990c6f999.png)
 
 excellent UX means excellent product.
+read about [usability testing](http://www.sensible.com/rsme.html)
 
 
 ________
