@@ -13,5 +13,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
     "npm-watch": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
