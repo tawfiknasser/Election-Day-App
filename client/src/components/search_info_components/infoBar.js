@@ -1,5 +1,5 @@
 import React from "react";
-import "./search.css";
+import "./infoBar.css";
 export default class GridItem extends React.Component {
   state = {
     clicked: false
@@ -8,9 +8,9 @@ export default class GridItem extends React.Component {
   render() {
     return(
       <React.Fragment>
-      <div className='searchSymbole' />
-      <div className="searchRectangle" contentEditable="true">
-        search
+
+      <div className="infoBar">
+        Box : 432     Voters: 252/320
       </div>
       </React.Fragment>
     );

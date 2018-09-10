@@ -1,0 +1,9 @@
+.infoBar {
+  position: absolute;
+  width: 314px;
+  height: 38px;
+  left: 32px;
+  top: 119px;
+
+  background: #ffca28;
+}
