@@ -1,6 +1,6 @@
 const tape = require('tape');
 
-tape('dummyTest', (t) => {
+tape('Tape is working', (t) => {
   t.equal(1, 1);
   t.end();
 });
