@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import SearchBar from './components/search_info_components/search';
 import InfoBar from './components/search_info_components/infoBar';
