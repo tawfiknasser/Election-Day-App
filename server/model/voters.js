@@ -1,12 +1,14 @@
-module.exports = [
+// 6 voters
+module.exports =[
+
   {
     name: "tawfik",
-    id: "2345773432",
+    id: "233333432",
     serial: "457"
   },
   {
     name: "tawgs",
-    id: "275323432",
+    id: "44432",
     serial: "499"
   },
   {
@@ -16,17 +18,17 @@ module.exports = [
   },
   {
     name: "tawfgf",
-    id: "234323432",
+    id: "23000032",
     serial: "057"
   },
   {
     name: "gfgfgfk",
-    id: "234323432",
+    id: "234323772",
     serial: "857"
   },
   {
     name: "tafgik",
-    id: "2343454532",
+    id: "26532",
     serial: "257"
   }
 ];
