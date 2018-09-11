@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-export default class SearchBar extends React.Component {
+export default class HeaderBar extends React.Component {
   state = {
     clicked: false // on the burger menue
   };
