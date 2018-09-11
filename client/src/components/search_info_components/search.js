@@ -1,6 +1,7 @@
 import React from "react";
 import "./search.css";
-export default class GridItem extends React.Component {
+
+export default class SearchBar extends React.Component {
   state = {
     clicked: false
   };
@@ -9,9 +10,8 @@ export default class GridItem extends React.Component {
     return(
       <React.Fragment>
       <div className='searchSymbole' />
-      <div className="searchRectangle" contentEditable="true">
-        search
-      </div>
+      <input className="searchRectangle" />
+
       </React.Fragment>
     );
   }
