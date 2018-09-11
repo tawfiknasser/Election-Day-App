@@ -1,4 +1,4 @@
-.HeadRectangle {
+.HeadBar {
   position: absolute;
   width: 375px;
   height: 57px;
@@ -8,7 +8,7 @@
   background: #ffca28;
 }
 
-.textHeader {
+.HeadText {
   position: absolute;
   width: 265px;
   height: 57px;
