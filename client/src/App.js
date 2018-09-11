@@ -6,6 +6,8 @@ import HeaderBar from './components/Header_Bar/header';
 
 class App extends Component {
 render(){
+
+
   return (
     <React.Fragment>
     <HeaderBar />

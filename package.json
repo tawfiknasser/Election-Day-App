@@ -1,5 +1,5 @@
 {
-  "name": "Election-Day App",
+  "name": "Election-Day-App",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,8 @@
   "devDependencies": {
     "debug": "~2.6.9",
     "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "morgan": "~1.9.0",
     "nodemon": "^1.18.4"
   }
