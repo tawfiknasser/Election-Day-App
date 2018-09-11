@@ -10,7 +10,7 @@ export default class SearchBar extends React.Component {
     return(
       <React.Fragment>
       <div className='searchSymbole' />
-      <input className="searchRectangle" />
+      <input className="searchBar" />
 
       </React.Fragment>
     );
