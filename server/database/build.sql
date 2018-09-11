@@ -1,7 +1,5 @@
 BEGIN;
 
-DROP TABLE IF EXISTS voters,users,box,region;
-
 CREATE TABLE voters(
   id INT PRIMARY KEY,
   last_name VARCHAR(20) NOT NULL,
