@@ -11,4 +11,4 @@ const runDbBuild = () => dbConnection.query(makeEmptyTables, (error) => {
   }
 });
 
-module.exports = runDbBuild;
+runDbBuild();
