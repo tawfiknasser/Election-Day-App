@@ -1,6 +1,9 @@
 .card {
-  position: absolute;
   width: 148px;
   height: 100px;
   background-color: #5664e7;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
