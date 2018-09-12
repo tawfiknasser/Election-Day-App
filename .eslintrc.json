@@ -8,8 +8,8 @@
     "import/no-extraneous-dependencies": false,
     "no-console": 0,
     "prefer-destructuring": ["error", {
-      "array": true,
-      "object": true
+      "array": false,
+      "object": false
     }
   }
 }
