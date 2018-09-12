@@ -7,11 +7,12 @@ export default class Card extends React.Component {
   };
 
   render() {
-    return(
+    return (
       <React.Fragment>
-      <div className='card' />
-    
-
+        <div className="card">
+          {this.props.name}
+          {this.props.id}
+        </div>
       </React.Fragment>
     );
   }

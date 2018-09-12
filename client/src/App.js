@@ -1,23 +1,20 @@
-
-import React, { Component } from 'react';
-import SearchBar from './components/search_info_components/search';
-import InfoBar from './components/search_info_components/infoBar';
-import HeaderBar from './components/Header_Bar/header';
-
+import React, { Component } from "react";
+import HeaderBar from "./components/Header_Bar/header";
+import BoxViewContainer from "./components/boxViewContainer";
+import LoginViewContainer from "./components/loginViewContainer";
 class App extends Component {
-render(){
+  state = {
+    login: true
+  };
 
-
-  return (
-    <React.Fragment>
-    <HeaderBar />
-    <SearchBar/>
-    <InfoBar />
-    </React.Fragment>
-
-  );
-}
-
+  render() {
+    return (
+      <React.Fragment>
+        <HeaderBar login={this.state.login} />
+        {this.state.login ? <BoxViewContainer /> : <LoginViewContainer />}
+       </React.Fragment>
+    );
+  }
 }
 
 export default App;

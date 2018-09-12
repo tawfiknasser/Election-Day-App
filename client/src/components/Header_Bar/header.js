@@ -9,14 +9,16 @@ export default class HeaderBar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="HeadRectangle">
-          <span className="textHeader">Elections Day</span>
+        <div className="HeadBar">
+          <span className="HeadText">Elections Day</span>
         </div>
+        {this.props.login===true && (
         <div className="burgerMenu">
           <div className="p1" />
           <div className="p2" />
           <div className="p3" />
-        </div>
+        </div> )
+      }
       </React.Fragment>
     );
   }
