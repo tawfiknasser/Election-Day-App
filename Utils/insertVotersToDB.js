@@ -11,9 +11,7 @@ const path = '/home/ray261/Desktop/BlackSheet/MINI_ELECTION_NAZARETH_2013.xlsx';
 const votersList = importXlsxFile(path);
 
 let id;
-let lastName;
-let firstName;
-let middleName;
+let fullName;
 let boxNumber;
 let address;
 let serialBoxNumber;
@@ -25,11 +23,9 @@ votersList.forEach((row, index) => {
     return;
   }
   id = row[0];
-  lastName = row[1].trim();
-  firstName = row[2].trim();
-  middleName = row[3].trim();
+  lastName = `${row[2].trim()} ${row[3].trim()} ${row[1].trim()}`;
   boxNumber = row[4];
   address = `${row[11].trim()} ${row[12].trim()}`;
   serialBoxNumber = row[16];
-  insertVoters([id, lastName, firstName, middleName, boxNumber, address, serialBoxNumber]);
+  insertVoters([id, fullName, boxNumber, address, serialBoxNumber]);
 });
