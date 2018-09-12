@@ -6,7 +6,7 @@
 const importXlsxFile = require('./importXlsxFile');
 const insertVoters = require('../server/database/queries/insertVoters');
 
-const path = '/home/ray261/Desktop/BlackSheet/MINI_ELECTION_NAZARETH_2013.xlsx';
+const path = process.argv[2];
 // get data from the external file to an array
 const votersList = importXlsxFile(path);
 
