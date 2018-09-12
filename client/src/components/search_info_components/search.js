@@ -7,7 +7,6 @@ export default class SearchBar extends React.Component {
   };
 
   render() {
-    console.log("dfsss");
     return (
       <React.Fragment>
         <div className="searchSymbole" />
