@@ -7,9 +7,12 @@
   "rules": {
     "import/no-extraneous-dependencies": false,
     "no-console": 0,
-    "prefer-destructuring": ["error", {
-      "array": false,
-      "object": false
-    }]
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": false,
+        "object": false
+      }
+    ]
   }
 }

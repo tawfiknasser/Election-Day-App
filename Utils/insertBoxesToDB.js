@@ -1,4 +1,4 @@
-// imports xlsx file as an array
+// importing xlsx file as an array
 // loop over the array imported
 // take the relevant data to a single box
 // run query of inserting box with the data
