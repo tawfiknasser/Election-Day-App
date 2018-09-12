@@ -14,7 +14,9 @@ export default class BoxViewContainer extends React.Component {
     // here should add the search query on e.target.value
     return;
   };
-
+  markVoter = e => {
+    // here should add the mark query to change the voted state
+  };
   componentDidMount() {
     fetch("/voters")
       .then(res => res.json())
