@@ -1,5 +1,6 @@
-const app = require("./app");
-const PORT = process.env.PORT || "3000";
-app.set("port", PORT);
+const app = require('./app');
+
+const PORT = process.env.PORT || '3000';
+app.set('port', PORT);
 
 app.listen(PORT);

@@ -21,13 +21,13 @@ CREATE TABLE region(
 );
 
 CREATE TABLE users(
-  id SERIAL PRIMARY KEY,
+  id INT PRIMARY KEY,
   full_name VARCHAR(100) UNIQUE NOT NULL,
   user_name VARCHAR(20) UNIQUE NOT NULL,
   password VARCHAR(20) NOT NULL,
   telephone INT NOT NULL,
   email VARCHAR(50) NULL,
-  type VARCHAR(20) NOT NULL
+  type VARCHAR(20) NOT NULL CHECK (type = 'B' OR type = 'R' OR type = 'M')
 );
 
 
