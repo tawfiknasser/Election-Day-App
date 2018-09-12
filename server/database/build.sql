@@ -17,7 +17,7 @@ CREATE TABLE voters(
 
 CREATE TABLE region(
   id SERIAL PRIMARY KEY,
-  name VARCHAR(50)
+  name VARCHAR(50) UNIQUE NOT NULL
 );
 
 CREATE TABLE users(
