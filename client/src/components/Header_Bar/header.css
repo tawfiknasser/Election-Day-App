@@ -1,0 +1,67 @@
+.HeadBar {
+  position: absolute;
+  width: 375px;
+  height: 57px;
+  left: 0px;
+  top: 0px;
+
+  background: #ffca28;
+}
+
+.HeadText {
+  position: absolute;
+  width: 265px;
+  height: 57px;
+  left: 55px;
+  top: 9px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 33px;
+  z-index: 1;
+  color: #000000;
+}
+
+/* menu */
+.burgerMenu {
+  position: absolute;
+  width: 32.05px;
+  height: 31.73px;
+  left: 13px;
+  top: 12px;
+}
+
+/* Path */
+.p1 {
+  position: absolute;
+  width: 18.04px;
+  height: 2.64px;
+  left: 13px;
+  top: 12px;
+  z-index: 1;
+  background: #eee;
+}
+
+/* Path */
+.p2 {
+  position: absolute;
+  width: 18.04px;
+  height: 2.64px;
+  left: 13px;
+  top: 17px;
+
+  background: #eeeeee;
+}
+
+/* Path */
+.p3 {
+  position: absolute;
+  width: 18.04px;
+  height: 2.64px;
+  left: 13px;
+  top: 22px;
+
+  background: #eeeeee;
+}
