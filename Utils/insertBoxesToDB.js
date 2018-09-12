@@ -6,7 +6,7 @@
 const importXlsxFile = require('./importXlsxFile');
 const insertBoxes = require('../server/database/queries/insertBoxes');
 
-const path = '/home/ray261/Desktop/BlackSheet/MINI_BOXES.xlsx';
+const path = process.argv[2];
 // get data from the external file to an array
 const boxesList = importXlsxFile(path);
 
