@@ -10,5 +10,4 @@ const runDbBuild = () => dbConnection.query(makeEmptyTables, (error) => {
     console.log('Success');
   }
 });
-
-module.exports = runDbBuild;
+runDbBuild();

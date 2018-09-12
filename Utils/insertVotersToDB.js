@@ -6,7 +6,7 @@
 const importXlsxFile = require('./importXlsxFile');
 const insertVoters = require('../server/database/queries/insertVoters');
 
-const path = '/home/ray261/Desktop/BlackSheet/MINI_ELECTION_NAZARETH_2013.xlsx';
+const path = process.argv[2];
 // get data from the external file to an array
 const votersList = importXlsxFile(path);
 
@@ -19,13 +19,13 @@ let serialBoxNumber;
 votersList.forEach((row, index) => {
   // first row is names of the columns in the xlsx file
   // last row is an empty row and both should be ignored
-  if (index === 1 || index === votersList.length - 1) {
+  if (index === 0 || index === votersList.length - 1) {
     return;
   }
   id = row[0];
   fullName = `${row[2].trim()} ${row[3].trim()} ${row[1].trim()}`;
-  boxNumber = row[4];
-  address = `${row[11].trim()} ${row[12].trim()}`;
+  boxNumber = row[5];
+  address = `${row[11].trim()} ${row[12]}`;
   serialBoxNumber = row[16];
   insertVoters([id, fullName, boxNumber, address, serialBoxNumber]);
 });
