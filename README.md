@@ -75,4 +75,5 @@ _Later..._
 _____
 ### Database schema
 For designig our database schema we are using [DB designer](https://www.dbdesigner.net) tool.
+![screenshot from 2018-09-12 15-44-50](https://user-images.githubusercontent.com/37940433/45425763-fcfa0100-b6a2-11e8-91f4-7dbd9d8e2dfa.png)
 
