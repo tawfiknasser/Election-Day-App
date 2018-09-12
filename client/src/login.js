@@ -15,7 +15,7 @@ const Login = () => {
       </div>
       <div>
         <button id="loginbutt">Log in</button>
-      </div>{" "}
+      </div>
     </React.Fragment>
   );
 };
