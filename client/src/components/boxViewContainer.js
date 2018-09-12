@@ -10,19 +10,9 @@ export default class BoxViewContainer extends React.Component {
     votersAmount: "",
     voted: ""
   };
-  searchVoter = () => {
-    return [
-      {
-        name: "hii",
-        id: 203434343,
-        serial: 234
-      },
-      {
-        name: "goo",
-        id: 765432343,
-        serial: 990
-      }
-    ];
+  searchVoter = e => {
+    // here should add the search query on e.target.value
+    return;
   };
 
   componentDidMount() {

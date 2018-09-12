@@ -9,8 +9,10 @@ export default class Card extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="card">{this.props.name}{this.props.id}</div>
-
+        <div className="card">
+          {this.props.name}
+          {this.props.id}
+        </div>
       </React.Fragment>
     );
   }

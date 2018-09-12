@@ -12,11 +12,13 @@ export default class HeaderBar extends React.Component {
         <div className="HeadBar">
           <span className="HeadText">Elections Day</span>
         </div>
+        {this.props.login===true && (
         <div className="burgerMenu">
           <div className="p1" />
           <div className="p2" />
           <div className="p3" />
-        </div>
+        </div> )
+      }
       </React.Fragment>
     );
   }
