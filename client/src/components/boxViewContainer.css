@@ -4,3 +4,15 @@
   flex-wrap: wrap;
   margin-top: 180px;
 }
+
+.flex-box {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.flex-box-element {
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+}

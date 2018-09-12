@@ -27,8 +27,12 @@ export default class BoxViewContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <SearchBar searchVoter={this.searchVoter} />
-        <InfoBar />
+        <section className="flex-box">
+          <SearchBar searchVoter={this.searchVoter} />
+        </section>
+        <section className="flex-box">
+          <InfoBar />
+        </section>
         <section id="flexbox" className="flex-container">
           {this.state.voters.map(voter => (
             <Card key={voter.id} id={voter.id} name={voter.name} />

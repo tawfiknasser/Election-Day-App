@@ -1,11 +1,12 @@
 .infoBar {
-  position:absolute;
   width: 314px;
   height: 38px;
-  left: 32px;
+  left: 27px;
   top: 119px;
+  margin: auto;
   z-index: -1;
   background: #ffca28;
-  vertical-align:middle;
-  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }

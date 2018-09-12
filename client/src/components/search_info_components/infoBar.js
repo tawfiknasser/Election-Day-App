@@ -8,9 +8,10 @@ export default class infoBar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section className="infoBar"><span>Box : 432 Voters: 252/320   </span></section>
+        <div className="infoBar">
+          <span>Box : 432 Voters: 252/320 </span>
+        </div>
       </React.Fragment>
     );
   }
 }
- 
