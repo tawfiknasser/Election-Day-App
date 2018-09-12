@@ -1,33 +1,18 @@
 import React, { Component } from "react";
-import SearchBar from "./components/search_info_components/search";
-import InfoBar from "./components/search_info_components/infoBar";
 import HeaderBar from "./components/Header_Bar/header";
-import Card from "./components/cardComponent/card";
-
+import BoxViewContainer from "./components/boxViewContainer";
+import LoginViewContainer from "./components/loginViewContainer";
 class App extends Component {
   state = {
-    voters: []
+    login: true
   };
-  // searchVoter = () => {};
 
-
-
-  componentDidMount() {
-  fetch('/voters')
-    .then(res => res.json())
-    .then(voters => this.setState({ voters }));
-}
   render() {
     return (
       <React.Fragment>
-        <HeaderBar />
-        <SearchBar />
-        <InfoBar /> // this three lines ^ should be in container
-
-        {this.state.voters.map(voter =>
-         <Card key={voter.id} id={voter.id} name={voter.name}/>
-       )}
-
+        <HeaderBar login={this.state.login} />
+        {this.state.login === true && <BoxViewContainer />}
+        {this.state.login === false && <LoginViewContainer />}
       </React.Fragment>
     );
   }
