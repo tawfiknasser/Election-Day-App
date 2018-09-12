@@ -11,9 +11,8 @@ class App extends Component {
     return (
       <React.Fragment>
         <HeaderBar login={this.state.login} />
-        {this.state.login === true && <BoxViewContainer />}
-        {this.state.login === false && <LoginViewContainer />}
-      </React.Fragment>
+        {this.state.login ? <BoxViewContainer /> : <LoginViewContainer />}
+       </React.Fragment>
     );
   }
 }
