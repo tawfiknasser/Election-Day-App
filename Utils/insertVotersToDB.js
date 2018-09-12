@@ -23,7 +23,7 @@ votersList.forEach((row, index) => {
     return;
   }
   id = row[0];
-  lastName = `${row[2].trim()} ${row[3].trim()} ${row[1].trim()}`;
+  fullName = `${row[2].trim()} ${row[3].trim()} ${row[1].trim()}`;
   boxNumber = row[4];
   address = `${row[11].trim()} ${row[12].trim()}`;
   serialBoxNumber = row[16];
