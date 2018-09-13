@@ -2,9 +2,7 @@ BEGIN;
 
 CREATE TABLE voters(
   id INT PRIMARY KEY,
-  last_name VARCHAR(20) NOT NULL,
-  first_name VARCHAR(20) NOT NULL,
-  middle_name VARCHAR(20) NOT NULL,
+  full_name VARCHAR(60) NOT NULL,
   box_number SMALLINT NOT NULL,
   address VARCHAR(100) NULL,
   serial_box_number INT NOT NULL,
