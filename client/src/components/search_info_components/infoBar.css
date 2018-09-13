@@ -1,9 +1,10 @@
 .infoBar {
-  width: 314px;
+  width: 86%;
   height: 38px;
-  left: 27px;
+  left: 10%;
   top: 119px;
   margin: auto;
+  margin-top: 8px;
   z-index: -1;
   background: #ffca28;
   display: flex;

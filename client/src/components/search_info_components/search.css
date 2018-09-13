@@ -1,7 +1,7 @@
 .searchBar {
-  width: 70%;
-  height: 48px;
-  left: 15px;
+  width: 60%;
+  height: 40px;
+  left: 10%;
   top: 71px;
   margin-top: 60px;
   background: #ffffff;
@@ -12,8 +12,9 @@
 }
 
 .searchSymbole {
-  width: 24px;
+  width: 0px;
   height: 24px;
-  left: 22px;
+  left: 0px;
   top: 83px;
+  z-index: 3;
 }
