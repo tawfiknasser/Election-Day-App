@@ -4,7 +4,7 @@ import BoxViewContainer from "./components/boxViewContainer";
 import LoginViewContainer from "./components/loginViewContainer";
 class App extends Component {
   state = {
-    login: true
+    login: false
   };
 
   render() {
