@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./boxViewContainer.css";
 import SearchBar from "./search_info_components/search";
 import InfoBar from "./search_info_components/infoBar";
 import Card from "./cardComponent/card";
@@ -26,11 +27,17 @@ export default class BoxViewContainer extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <SearchBar searchVoter={this.searchVoter} />
-        <InfoBar />
-        {this.state.voters.map(voter => (
-          <Card key={voter.id} id={voter.id} name={voter.name} />
-        ))}
+        <section className="flex-box">
+          <SearchBar searchVoter={this.searchVoter} />
+        </section>
+        <section className="flex-box">
+          <InfoBar />
+        </section>
+        <section id="flexbox" className="flex-container">
+          {this.state.voters.map(voter => (
+            <Card key={voter.id} id={voter.id} name={voter.name} />
+          ))}
+        </section>
       </React.Fragment>
     );
   }
