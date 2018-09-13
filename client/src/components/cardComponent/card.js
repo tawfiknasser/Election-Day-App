@@ -10,15 +10,15 @@ export default class Card extends React.Component {
     // confirm message first
 
     if (this.state.clicked) {
-      let confirma = window.confirm(`Unmark ${this.props.name}  ?`);
-      if (confirma == false) return;
+      let confirmValue = window.confirm(`Unmark ${this.props.name}  ?`);
+      if (!confirmValue) return;
       this.setState({
         clicked: false,
         classIs: "card cardUnclicked"
       });
     } else {
-      let confirma = window.confirm(`Mark ${this.props.name}  ?`);
-      if (confirma == false) return;
+      let confirmValue = window.confirm(`Mark ${this.props.name}  ?`);
+      if (!confirmValue) return;
       this.setState({
         clicked: true,
         classIs: "card cardClicked"
