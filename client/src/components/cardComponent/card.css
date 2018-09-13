@@ -2,5 +2,11 @@
   position: absolute;
   width: 148px;
   height: 100px;
+}
+.cardClicked {
+  background-color: #ff6347;
+}
+
+.cardUnclicked {
   background-color: #5664e7;
 }

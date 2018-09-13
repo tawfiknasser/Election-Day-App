@@ -12,7 +12,7 @@ class App extends Component {
       <React.Fragment>
         <HeaderBar login={this.state.login} />
         {this.state.login ? <BoxViewContainer /> : <LoginViewContainer />}
-       </React.Fragment>
+      </React.Fragment>
     );
   }
 }
