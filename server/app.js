@@ -1,3 +1,5 @@
+/* eslint no-unused-vars: ["error", { "args": "after-used" }] */
+
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -15,10 +17,12 @@ app.use(cookieParser());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '..', 'client/build')));
 }
+
 app.use('/', indexRouter);
 
 // error handlerfunction
-app.use((err, req, res) => {
+// eslint-disable-next-line
+app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.send('error');
 });
