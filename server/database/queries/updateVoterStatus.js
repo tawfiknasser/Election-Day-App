@@ -1,15 +1,8 @@
 const dbConnection = require('../dbConnection');
 
-const updateVoterStatus = (idOfVoter) => {
-  const queryString = 'UPDATE voters SET status = 3 WHERE id = $1';
-  dbConnection.query(queryString, [idOfVoter], (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      // this is just for check - remove else before push
-      console.log('success');
-    }
-  });
+const updateVoterStatus = (idOfVoter, status, cb) => {
+  const queryString = 'UPDATE voters SET status = $1 WHERE id = $2';
+  dbConnection.query(queryString, [status, idOfVoter], cb);
 };
 
 module.exports = updateVoterStatus;
