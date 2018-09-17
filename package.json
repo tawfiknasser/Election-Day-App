@@ -9,9 +9,10 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.3",
+    "env2": "^2.2.2",
     "express": "~4.16.0",
     "pg": "^7.4.3",
-    "env2": "^2.2.2"
+    "query-string": "^5.1.1"
   },
   "devDependencies": {
     "debug": "~2.6.9",
