@@ -12,7 +12,7 @@ router.get('/voters', (req, res) => {
 });
 router.get('/idVoter/:id/status/:status', (req, res) => {
   // UpdateStatus
-  updateVoterStatus(req.params.id, req.params.status, (req, res) => {
+  updateVoterStatus(req.params.id, req.params.status, (request, response) => {
     // cb to handle errors
   });
 });
