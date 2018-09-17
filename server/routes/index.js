@@ -9,5 +9,10 @@ router.get('/', (req, res) => {
 router.get('/voters', (req, res) => {
   res.json(voters);
 });
-
+router.get('/idVoter/:id/status/:status', (req, res) => {
+  console.log(req.params.status);
+});
+// router.get('/hii', (req, res) => {
+//   console.log('hi router');
+// });
 module.exports = router;
