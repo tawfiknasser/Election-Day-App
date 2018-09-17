@@ -14,3 +14,25 @@ router.get('/useronbox/voter/:input', (req, res) => {
     }
   });
 });
+
+router.get('/useronbox/votersnumber/:boxnumber', (req, res) => {
+  // will be defined when merging PR n.#74
+  getNumberOfVotersInBox(req.params.boxnumber, (error, result) => {
+    if (error) {
+      res.status(500).end();
+    } else {
+      res.json(result);
+    }
+  });
+});
+
+router.get('/useronbox/votednumber/:boxnumber', (req, res) => {
+  // will be defined when merging PR n.#75
+  getNumberOfVotedByBox(req.params.boxnumber, (error, result) => {
+    if (error) {
+      res.status(500).end();
+    } else {
+      res.json(result);
+    }
+  });
+});
