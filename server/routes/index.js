@@ -1,9 +1,9 @@
 const express = require('express');
-const updateVoterStatus = require('../database/queries/updateVoterStatus');
 const path = require('path');
+const updateVoterStatus = require('../database/queries/updateVoterStatus');
+
 const router = express.Router();
 const voters = require('../model/voters');
-/* GET home page. */
 
 router.get('/voters', (req, res) => {
   res.json(voters);
@@ -12,7 +12,9 @@ router.get('/idVoter/:id/status/:status', (req, res) => {
   // UpdateStatus
   updateVoterStatus(req.params.id, req.params.status, (err) => {
     // cb to handle errors
+    /* eslint-disable indent */
     err ? res.status(500).end() : res.status(200).end();
+    /* eslint-enable */
   });
 });
 
