@@ -1,18 +1,17 @@
-import React from 'react';
-import style from './boxViewContainer.css';
-import SearchBar from './search_info_components/search';
-import InfoBar from './search_info_components/infoBar';
-import Card from './cardComponent/card';
+import React from "react";
+import style from "./boxViewContainer.css";
+import SearchBar from "./search_info_components/search";
+import InfoBar from "./search_info_components/infoBar";
+import Card from "./cardComponent/card";
 
 export default class BoxViewContainer extends React.Component {
   state = {
-    box: '',
+    box: "",
     voters: [],
-    votersAmount: '',
-    voted: ''
+    votersAmount: "",
+    voted: ""
   };
   searchVoter = e => {
-    console.log('search voer in BOX VIEW');
     // here should add the search query on e.target.value
     if (e.target.value) {
       fetch(`/voter/${e.target.value}`)
