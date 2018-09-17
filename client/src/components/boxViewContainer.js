@@ -13,16 +13,16 @@ export default class BoxViewContainer extends React.Component {
   };
   searchVoter = e => {
     // here should add the search query on e.target.value
-    return;
+    if (e.target.value) {
+      fetch(`/voter/${e.target.value}`)
+        .then(res => res.json())
+        .then(voters => this.setState({ voters }));
+      return;
+    }
   };
   markVoter = e => {
     // here should add the mark query to change the voted state
   };
-  componentDidMount() {
-    fetch("/voters")
-      .then(res => res.json())
-      .then(voters => this.setState({ voters }));
-  }
 
   render() {
     return (
@@ -35,7 +35,12 @@ export default class BoxViewContainer extends React.Component {
         </section>
         <section id="flexbox" className="flex-container">
           {this.state.voters.map(voter => (
-            <Card key={voter.id} id={voter.id} name={voter.name} />
+            <Card
+              key={voter.id}
+              id={voter.id}
+              name={voter.full_name}
+              box_number={voter.serial_box_number}
+            />
           ))}
         </section>
       </React.Fragment>
