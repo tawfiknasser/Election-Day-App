@@ -1,12 +1,10 @@
 const express = require('express');
 const path = require('path');
-
 const updateVoterStatus = require('../database/queries/updateVoterStatus');
+//const voters = require('../model/voters'); // this is for tests
+const getVotersFromDB = require('../helpers/getVotersHelper');
 
 const router = express.Router();
-//const voters = require('../model/voters'); // this is for tests
-
-const getVotersFromDB = require('../helpers/getVotersHelper');
 
 
 router.get('/voter/:input', (req, res) => {
@@ -19,6 +17,10 @@ router.get('/voter/:input', (req, res) => {
       res.json(result.rows);
     }
   });
+
+});
+router.post("/login", (req, res) => {
+  console.log(req.body);
 });
 router.get('/idVoter/:id/status/:status', (req, res) => {
   // UpdateStatus
