@@ -14,7 +14,7 @@ router.get('/idVoter/:id/status/:status', (req, res) => {
   // UpdateStatus
   updateVoterStatus(req.params.id, req.params.status, (err) => {
     // cb to handle errors
-    err ? console.log(err) : console.log('good');
+    err ? res.status(500).end() : res.status(200).end();
   });
 });
 
