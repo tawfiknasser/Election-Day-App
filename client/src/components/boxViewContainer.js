@@ -17,14 +17,26 @@ export default class BoxViewContainer extends React.Component {
     if (e.target.value) {
       fetch(`/useronbox/voter/${e.target.value}`)
         .then(res => res.json())
-        .then(voters => this.setState({ voters }));
+        .then(voters => this.setState({ voters }))
+        .then(this.setInfoBarVars()); // then call functions
       return;
     }
   };
   markVoter = e => {
     // here should add the mark query to change the voted state
   };
+  setInfoBarVars = () => {
+    // here it setState for votersAmount and voted so we can send it to the InfoBar Component
+    // we should call this function each time we mark/unMark someone
+    console.log("i'm heere");
+    fetch(`/useronbox/votersnumber/${this.state.box}`).then(number =>
+      this.setState({ votersAmount: number })
+    );
 
+    fetch(`/useronbox/votednumber/${this.state.box}`).then(number =>
+      this.setState({ voted: number })
+    );
+  };
   render() {
     return (
       <React.Fragment>

@@ -36,3 +36,5 @@ router.get('/useronbox/votednumber/:boxnumber', (req, res) => {
     }
   });
 });
+
+module.exports = router;
