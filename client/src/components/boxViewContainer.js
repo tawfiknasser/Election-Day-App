@@ -8,8 +8,8 @@ export default class BoxViewContainer extends React.Component {
   state = {
     box: "",
     voters: [],
-    votersAmount: "",
-    voted: ""
+    votersAmount: 0,
+    voted: 0
   };
   searchVoter = e => {
     console.log("search voer in BOX VIEW");
@@ -32,7 +32,10 @@ export default class BoxViewContainer extends React.Component {
           <SearchBar searchVoter={this.searchVoter} />
         </section>
         <section className="flex-box">
-          <InfoBar />
+          <InfoBar
+            voted={this.state.voted}
+            votersAmount={this.state.votersAmount}
+          />
         </section>
         <section id="flexbox" className="flex-container">
           {this.state.voters.map(voter => (
