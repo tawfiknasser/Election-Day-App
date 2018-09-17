@@ -12,9 +12,7 @@ router.get('/idVoter/:id/status/:status', (req, res) => {
   // UpdateStatus
   updateVoterStatus(req.params.id, req.params.status, (err) => {
     // cb to handle errors
-    /* eslint-disable indent */
     err ? res.status(500).end() : res.status(200).end();
-    /* eslint-enable */
   });
 });
 
