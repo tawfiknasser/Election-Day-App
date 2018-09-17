@@ -1,10 +1,19 @@
 const express = require('express');
 const path = require('path');
+
 const getVotersFromDB = require('../helpers/getVotersHelper');
 
 const router = express.Router();
-// const voters = require('../model/voters');
+const voters = require('../model/voters');
+
 /* GET home page. */
+router.get("/", (req, res) => {
+  res.send("helloww");
+});
+router.get("/voters", (req, res) => {
+
+
+  res.json(voters); }
 
 router.get('/voter/:input', (req, res) => {
   // TODO change the 10 parameter passed to getVotersFromDB function.
@@ -16,6 +25,10 @@ router.get('/voter/:input', (req, res) => {
       res.json(result.rows);
     }
   });
+
+});
+router.post("/login", (req, res) => {
+  console.log(req.body);
 });
 
 if (process.env.NODE_ENV === 'production') {
