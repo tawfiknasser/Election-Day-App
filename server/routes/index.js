@@ -1,16 +1,15 @@
-const express = require("express");
+const express = require('express');
+const loginHandler = require('./loginHandler');
 
 const router = express.Router();
-const voters = require("../model/voters");
+const voters = require('../model/voters');
 /* GET home page. */
-router.get("/", (req, res) => {
-  res.send("helloww");
+router.get('/', (req, res) => {
+  res.send('helloww');
 });
-router.get("/voters", (req, res) => {
+router.get('/voters', (req, res) => {
   res.json(voters);
 });
-router.post("/login", (req, res) => {
-  console.log(req.body);
-});
+router.post('/login', loginHandler);
 
 module.exports = router;
