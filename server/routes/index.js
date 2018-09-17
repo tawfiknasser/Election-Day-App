@@ -12,8 +12,9 @@ router.get('/voters', (req, res) => {
 });
 router.get('/idVoter/:id/status/:status', (req, res) => {
   // UpdateStatus
-  updateVoterStatus(req.params.id, req.params.status, (request, response) => {
+  updateVoterStatus(req.params.id, req.params.status, (err) => {
     // cb to handle errors
+    err ? console.log(err) : console.log('good');
   });
 });
 
