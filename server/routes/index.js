@@ -1,4 +1,5 @@
 const express = require('express');
+const updateVoterStatus = require('../database/queries/updateVoterStatus');
 
 const router = express.Router();
 const voters = require('../model/voters');
@@ -10,9 +11,10 @@ router.get('/voters', (req, res) => {
   res.json(voters);
 });
 router.get('/idVoter/:id/status/:status', (req, res) => {
-  console.log(req.params.status);
+  // UpdateStatus
+  updateVoterStatus(req.params.id, req.params.status, (req, res) => {
+    // cb to handle errors
+  });
 });
-// router.get('/hii', (req, res) => {
-//   console.log('hi router');
-// });
+
 module.exports = router;
