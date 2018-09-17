@@ -1,5 +1,5 @@
 const express = require('express');
-const loginHandler = require('./loginHandler');
+const loginHandler = require('../helpers/loginHelper');
 
 const router = express.Router();
 const voters = require('../model/voters');

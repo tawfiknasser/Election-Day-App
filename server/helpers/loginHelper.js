@@ -1,5 +1,5 @@
 const getPassword = require('../database/queries/getPassword');
-const { comparePasswords } = require('../helpers/hashHelper');
+const { comparePasswords } = require('./hashHelper');
 
 module.exports = (req, res) => {
   const { username, password } = req.body;
