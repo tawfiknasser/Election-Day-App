@@ -9,13 +9,15 @@ const Login = () => {
         class="mainIcon"
         alt="icon"
       />
-      <div>
-        <input class="username" placeholder="username" />
-        <input class="password" placeholder="password" />
-      </div>
-      <div>
-        <button id="loginbutt">Log in</button>
-      </div>
+      <form>
+        <div>
+          <input class="username" placeholder="username" required />
+          <input class="password" placeholder="password" required />
+        </div>
+        <div>
+          <button id="loginbutt">Log in</button>
+        </div>
+      </form>
     </React.Fragment>
   );
 };

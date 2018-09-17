@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
   state = {
-    login: true
+    login: false
   };
 
   render() {
@@ -20,7 +20,6 @@ class App extends Component {
           />
         </React.Fragment>
       </Router>
-
     );
   }
 }
