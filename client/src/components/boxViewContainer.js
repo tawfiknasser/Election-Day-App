@@ -6,7 +6,7 @@ import Card from "./cardComponent/card";
 
 export default class BoxViewContainer extends React.Component {
   state = {
-    box: "",
+    box: 10,
     voters: [],
     votersAmount: 0,
     voted: 0
@@ -16,25 +16,21 @@ export default class BoxViewContainer extends React.Component {
     if (e.target.value) {
       fetch(`/useronbox/voter/${e.target.value}`)
         .then(res => res.json())
-        .then(voters => this.setState({ voters }))
-        .then(this.setInfoBarVars()); // then call functions
+        .then(voters => this.setState({ voters }));
       return;
     }
   };
-  markVoter = e => {
-    // here should add the mark query to change the voted state
-  };
+
   setInfoBarVars = () => {
     // here it setState for votersAmount and voted so we can send it to the InfoBar Component
     // we should call this function each time we mark/unMark someone
-    console.log("i'm heere");
-    fetch(`/useronbox/votersnumber/${this.state.box}`).then(number =>
-      this.setState({ votersAmount: number })
-    );
+    fetch(`/useronbox/votersnumber/${this.state.box}`)
+      .then(res => res.json())
+      .then(number => this.setState({ votersAmount: Number(number) }));
 
-    fetch(`/useronbox/votednumber/${this.state.box}`).then(number =>
-      this.setState({ voted: number })
-    );
+    fetch(`/useronbox/votednumber/${this.state.box}`)
+      .then(res => res.json())
+      .then(number => this.setState({ voted: Number(number) }));
   };
   render() {
     return (
@@ -55,6 +51,7 @@ export default class BoxViewContainer extends React.Component {
               id={voter.id}
               name={voter.full_name}
               box_number={voter.serial_box_number}
+              setInfoBarVars={this.setInfoBarVars}
             />
           ))}
         </section>

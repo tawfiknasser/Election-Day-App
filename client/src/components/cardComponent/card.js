@@ -21,6 +21,7 @@ export default class Card extends React.Component {
             : "card cardClicked"
         })
       )
+      .then(this.props.setInfoBarVars)
 
       .catch(error => console.log(error));
   };
