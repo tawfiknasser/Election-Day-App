@@ -12,7 +12,6 @@ export default class HeaderBar extends React.Component {
         <div className="HeadBar">
           <span className="HeadText">Elections Day</span>
         </div>
-
         {this.props.login === true && <MainMenu />}
       </React.Fragment>
     );
