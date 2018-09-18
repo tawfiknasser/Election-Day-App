@@ -1,19 +1,11 @@
 const express = require('express');
 const path = require('path');
-
+const updateVoterStatus = require('../database/queries/updateVoterStatus');
+//const voters = require('../model/voters'); // this is for tests
 const getVotersFromDB = require('../helpers/getVotersHelper');
 
 const router = express.Router();
-const voters = require('../model/voters');
 
-/* GET home page. */
-router.get("/", (req, res) => {
-  res.send("helloww");
-});
-router.get("/voters", (req, res) => {
-
-
-  res.json(voters); }
 
 router.get('/voter/:input', (req, res) => {
   // TODO change the 10 parameter passed to getVotersFromDB function.
@@ -29,6 +21,13 @@ router.get('/voter/:input', (req, res) => {
 });
 router.post("/login", (req, res) => {
   console.log(req.body);
+});
+router.get('/idVoter/:id/status/:status', (req, res) => {
+  // UpdateStatus
+  updateVoterStatus(req.params.id, req.params.status, (err) => {
+    // cb to handle errors
+    err ? res.status(500).end() : res.status(200).end();
+  });
 });
 
 if (process.env.NODE_ENV === 'production') {
