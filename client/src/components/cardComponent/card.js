@@ -22,8 +22,7 @@ export default class Card extends React.Component {
         })
       )
       .then(this.props.setInfoBarVars)
-
-      .catch(error => console.log(error));
+      .catch(() => alert("Something wrong ! please call your provider"));
   };
   render() {
     return (

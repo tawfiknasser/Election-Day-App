@@ -2,9 +2,6 @@ const express = require('express');
 const path = require('path');
 
 const router = express.Router();
-// const userOnBoxRouter = require('./userOnBox');
-
-// router.use('/useronbox', userOnBoxRouter);
 
 router.post('/login', (req, res) => {
   console.log(req.body);
