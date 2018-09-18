@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./LoginComponent/login";
-const rendering = () => {
+const LoginBody = () => {
   return <Login />;
 };
 export default LoginBody;
