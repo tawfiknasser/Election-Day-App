@@ -6,29 +6,28 @@ export default class Card extends React.Component {
     clicked: false, // when clicked it should change color
     classIs: "card cardUnclicked"
   };
-  colorClick = () => {
+  changeColorOnClick = () => {
     // confirm message first
+    let confirmValue = window.confirm(
+      `${this.state.clicked ? "Unmark" : "Mark"} ${this.props.name} ?`
+    );
+    if (!confirmValue) return;
+    fetch(`/idVoter/:${this.props.id}/status/:${!this.state.clicked}`)
+      .then(
+        this.setState({
+          clicked: !this.state.clicked,
+          classIs: this.state.clicked
+            ? "card cardUnclicked"
+            : "card cardClicked"
+        })
+      )
 
-    if (this.state.clicked) {
-      let confirmValue = window.confirm(`Unmark ${this.props.name}  ?`);
-      if (!confirmValue) return;
-      this.setState({
-        clicked: false,
-        classIs: "card cardUnclicked"
-      });
-    } else {
-      let confirmValue = window.confirm(`Mark ${this.props.name}  ?`);
-      if (!confirmValue) return;
-      this.setState({
-        clicked: true,
-        classIs: "card cardClicked"
-      });
-    }
+      .catch(error => console.log(error));
   };
   render() {
     return (
       <React.Fragment>
-        <div className={this.state.classIs} onClick={this.colorClick}>
+        <div className={this.state.classIs} onClick={this.changeColorOnClick}>
           {this.props.name}
           {this.props.id}
         </div>

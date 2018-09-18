@@ -1,8 +1,16 @@
 const express = require('express');
 const getVotersFromDB = require('../helpers/getVotersHelper');
+const updateVoterStatus = require('../database/queries/updateVoterStatus');
 
 const router = express.Router();
 
+router.get('/idVoter/:id/status/:status', (req, res) => {
+  // UpdateStatus
+  updateVoterStatus(req.params.id, req.params.status, (err) => {
+    // cb to handle errors
+    err ? res.status(500).end() : res.status(200).end();
+  });
+});
 router.get('/useronbox/voter/:input', (req, res) => {
   // TODO change the 10 parameter passed to getVotersFromDB function.
   // It should be accquired from the coockie once its set

@@ -10,7 +10,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("render in app.js");
     return (
       <Router>
         <React.Fragment>

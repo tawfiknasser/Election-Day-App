@@ -12,7 +12,6 @@ export default class BoxViewContainer extends React.Component {
     voted: 0
   };
   searchVoter = e => {
-    console.log("search voer in BOX VIEW");
     // here should add the search query on e.target.value
     if (e.target.value) {
       fetch(`/useronbox/voter/${e.target.value}`)

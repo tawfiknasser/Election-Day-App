@@ -2,9 +2,11 @@ const express = require('express');
 const path = require('path');
 
 const router = express.Router();
-// const voters = require('../model/voters');
-/* GET home page. */
-// here should add shared routes between the different views
+
+router.post('/login', (req, res) => {
+  console.log(req.body);
+});
+
 if (process.env.NODE_ENV === 'production') {
   router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', '..', 'client/build/index.html'));
