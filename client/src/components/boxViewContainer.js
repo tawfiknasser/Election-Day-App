@@ -32,6 +32,9 @@ export default class BoxViewContainer extends React.Component {
       .then(res => res.json())
       .then(number => this.setState({ voted: Number(number) }));
   };
+  componentDidMount() {
+    this.setInfoBarVars();
+  }
   render() {
     return (
       <React.Fragment>
