@@ -12,7 +12,7 @@ export default class Card extends React.Component {
       `${this.state.clicked ? "Unmark" : "Mark"} ${this.props.name} ?`
     );
     if (!confirmValue) return;
-    fetch(`/idVoter/${this.props.id}/status/${!this.state.clicked}`)
+    fetch(`useronbox/idVoter/${this.props.id}/status/${!this.state.clicked}`)
       .then(
         this.setState({
           clicked: !this.state.clicked,
