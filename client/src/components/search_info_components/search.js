@@ -9,7 +9,6 @@ export default class SearchBar extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="searchSymbole" />
         <input onKeyUp={this.props.searchVoter} className="searchBar" />
       </React.Fragment>
     );
