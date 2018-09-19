@@ -8,7 +8,7 @@ export default class BoxViewContainer extends React.Component {
   state = {
     box: "",
     voters: [],
-    otersAmount: "",
+    votersAmount: "",
     voted: ""
   };
   searchVoter = e => {
