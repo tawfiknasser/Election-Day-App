@@ -9,7 +9,9 @@ export default class infoBar extends React.Component {
     return (
       <React.Fragment>
         <div className="infoBar">
-          <span>Box : 432 Voters: 252/320 </span>
+          <span>
+            Box : 10 Voters: {this.props.voted}/{this.props.votersAmount}{" "}
+          </span>
         </div>
       </React.Fragment>
     );

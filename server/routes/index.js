@@ -1,33 +1,10 @@
 const express = require('express');
 const path = require('path');
-const updateVoterStatus = require('../database/queries/updateVoterStatus');
-//const voters = require('../model/voters'); // this is for tests
-const getVotersFromDB = require('../helpers/getVotersHelper');
 
 const router = express.Router();
 
-
-router.get('/voter/:input', (req, res) => {
-  // TODO change the 10 parameter passed to getVotersFromDB function.
-  // It should be accquired from the coockie once its set
-  getVotersFromDB(req.params.input, 10, (error, result) => {
-    if (error) {
-      res.status(500).end();
-    } else {
-      res.json(result.rows);
-    }
-  });
-
-});
-router.post("/login", (req, res) => {
+router.post('/login', (req, res) => {
   console.log(req.body);
-});
-router.get('/idVoter/:id/status/:status', (req, res) => {
-  // UpdateStatus
-  updateVoterStatus(req.params.id, req.params.status, (err) => {
-    // cb to handle errors
-    err ? res.status(500).end() : res.status(200).end();
-  });
 });
 
 if (process.env.NODE_ENV === 'production') {
