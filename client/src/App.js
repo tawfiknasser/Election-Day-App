@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HeaderBar from "./components/Header_Bar/header";
 import BoxViewContainer from "./components/boxViewContainer";
-import LoginViewContainer from "./components/loginViewContainer";
+import LoginViewContainer from "./components/LoginComponent/login";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
