@@ -3,8 +3,8 @@ import "./card.css";
 
 export default class Card extends React.Component {
   state = {
-    clicked: false, // when clicked it should change color
-    classIs: "card cardUnclicked"
+    clicked: this.props.voted, // when clicked it should change color
+    classIs: this.props.voted ? "card cardClicked" : "card cardUnclicked"
   };
   changeColorOnClick = () => {
     // confirm message first
@@ -12,7 +12,7 @@ export default class Card extends React.Component {
       `${this.state.clicked ? "Unmark" : "Mark"} ${this.props.name} ?`
     );
     if (!confirmValue) return;
-    fetch(`/idVoter/:${this.props.id}/status/:${!this.state.clicked}`)
+    fetch(`/idVoter/${this.props.id}/status/${!this.state.clicked}`)
       .then(
         this.setState({
           clicked: !this.state.clicked,
@@ -21,8 +21,8 @@ export default class Card extends React.Component {
             : "card cardClicked"
         })
       )
-
-      .catch(error => console.log(error));
+      .then(this.props.setInfoBarVars)
+      .catch(() => alert("Something wrong ! please call your provider"));
   };
   render() {
     return (
