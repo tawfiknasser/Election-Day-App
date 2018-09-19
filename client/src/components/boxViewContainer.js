@@ -53,6 +53,7 @@ export default class BoxViewContainer extends React.Component {
               key={voter.id}
               id={voter.id}
               name={voter.full_name}
+              voted={voter.status}
               box_number={voter.serial_box_number}
               setInfoBarVars={this.setInfoBarVars}
             />

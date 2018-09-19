@@ -12,13 +12,13 @@ const dbConnection = require('../dbConnection');
 
 const getVoterByName = (nameOfVoter, boxNumber, cb) => {
   const queryString =
-    'SELECT id,full_name,serial_box_number FROM voters WHERE box_number=$1 AND full_name like $2';
+    'SELECT id,full_name,serial_box_number,status FROM voters WHERE box_number=$1 AND full_name like $2';
   dbConnection.query(queryString, [boxNumber, '%' + nameOfVoter + '%'], cb);
 };
 
 const getVoterByIdOrSerial = (idOrSerial, boxNumber, cb) => {
   const queryString =
-    'SELECT id,full_name,serial_box_number FROM voters WHERE box_number=$1 AND (id::text LIKE $2 OR serial_box_number::text LIKE $2)';
+    'SELECT id,full_name,serial_box_number,status FROM voters WHERE box_number=$1 AND (id::text LIKE $2 OR serial_box_number::text LIKE $2)';
   dbConnection.query(queryString, [boxNumber, '%' + idOrSerial + '%'], cb);
 };
 
