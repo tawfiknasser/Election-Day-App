@@ -11,4 +11,5 @@
   flex-wrap: nowrap;
   justify-content: center;
   box-shadow: 1px 1px 1px grey;
+  border-radius: 7px;
 }
