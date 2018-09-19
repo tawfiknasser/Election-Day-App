@@ -4,7 +4,7 @@ const { hashPassword } = require('../server/helpers/hashHelper');
 const usernmae = process.argv[2];
 const password = process.argv[3];
 const id = process.argv[4];
-hashPassword(password, (hasingError, hashedPassword) => {
+hashPassword(password, (hashingError, hashedPassword) => {
   if (hashingError) {
     throw hashingError; // only runs in terminal
   } else {
