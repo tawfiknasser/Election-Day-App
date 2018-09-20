@@ -5,11 +5,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
 }
 .cardClicked {
   background-color: #ff6347;
 }
 
 .cardUnclicked {
-  background-color: #5664e7;
+  background-color: #554fe2;
 }

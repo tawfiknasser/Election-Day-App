@@ -2,7 +2,7 @@
   width: 55%;
   height: 38px;
   left: 10%;
-  top: 119px;
+  top: 115px;
   margin: auto;
   margin-top: 2px;
   z-index: -1;
@@ -10,4 +10,6 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  box-shadow: 1px 1px 1px grey;
+  border-radius: 7px;
 }
