@@ -1,11 +1,26 @@
 {
-  "extends": "airbnb",
+  "extends": "eslint:recommended",
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["react", "import"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
   },
   "rules": {
-    "import/no-extraneous-dependencies": false,
+    "react/jsx-no-bind": [
+      0,
+      {
+        "ignoreRefs": false,
+        "allowArrowFunctions": true,
+        "allowBind": false
+      }
+    ],
+    "no-unused-vars": "off",
+    "import/no-extraneous-dependencies": 0,
     "no-unused-expressions": ["error", { "allowTernary": true }],
     "no-console": 0,
     "prefer-destructuring": [
