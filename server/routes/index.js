@@ -4,7 +4,7 @@ const updateVoterStatus = require("../database/queries/updateVoterStatus");
 //const voters = require('../model/voters'); // this is for tests
 const getVotersFromDB = require("../helpers/getVotersHelper");
 const loginHandler = require("../helpers/loginHelper");
-
+const verify = require("../helpers/verify");
 const router = express.Router();
 
 router.get("/voter/:input", (req, res) => {
@@ -18,7 +18,15 @@ router.get("/voter/:input", (req, res) => {
     }
   });
 });
+
 router.post("/login", loginHandler);
+
+router.post("/verify",verify,(req,res)=>{
+  res.json({status:true,
+            box:req.decoded.box});
+});
+
+
 router.get("/idVoter/:id/status/:status", (req, res) => {
   // UpdateStatus
   updateVoterStatus(req.params.id, req.params.status, err => {

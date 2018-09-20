@@ -9,7 +9,7 @@ hashPassword(password, (hashingError, hashedPassword) => {
     throw hashingError; // only runs in terminal
   } else {
     db_Connection.query(
-      'insert into users (id,full_name,user_name,password,telephone,email,type) values ($1,$2,$3,$4,$5,$6,$7)',
+       'insert into users (id,full_name,user_name,password,telephone,email,type) values ($1,$2,$3,$4,$5,$6,$7)',
       [id, usernmae, usernmae, hashedPassword, 242345, 'erge@j.com', 'B'],
       (dbError) => {
         if (dbError) {

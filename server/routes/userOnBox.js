@@ -14,8 +14,9 @@ router.get('/idVoter/:id/status/:status', (req, res) => {
     err ? res.status(500).end() : res.status(200).end();
   });
 });
-router.get('/voter/:input', (req, res) => {
-  getVotersFromDB(req.params.input, 10, (error, result) => {
+router.get('/voter/:input/:box', (req, res) => {
+  console.log(req.params.box);
+  getVotersFromDB(req.params.input, req.params.box, (error, result) => {
     if (error) {
       res.status(500).json({ error });
     } else {
