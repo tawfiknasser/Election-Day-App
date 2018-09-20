@@ -9,12 +9,6 @@
   display: flex;
   flex-wrap: nowrap;
   text-align: center;
-}
-
-.searchSymbole {
-  width: 0px;
-  height: 24px;
-  left: 0px;
-  top: 83px;
-  z-index: 3;
+  background: url("https://user-images.githubusercontent.com/36166288/45758791-1f55c680-bc2f-11e8-9fcd-56d2f6e0fa32.png")
+    no-repeat scroll 7px 7px;
 }
