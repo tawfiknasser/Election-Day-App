@@ -15,7 +15,7 @@ hashPassword(password, (hashingError, hashedPassword) => {
         if (dbError) {
           throw dbError; // only runs in terminal
         }
-      },
+      }
     );
   }
 });
