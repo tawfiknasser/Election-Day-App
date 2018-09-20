@@ -2,6 +2,11 @@ import React from "react";
 import "./login.css";
 import axios from "axios";
 class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
   handleSubmit(event) {
     event.preventDefault();
     const { username, password } = event.target.elements;
@@ -11,7 +16,12 @@ class Login extends React.Component {
     };
     axios
       .post("/login", postData)
-      .then(res => console.log(res))
+      .then(
+        function(res) {
+          console.log(res);
+          this.props.loggedIn();
+        }.bind(this)
+      )
       .catch(err => console.log(err));
   }
 

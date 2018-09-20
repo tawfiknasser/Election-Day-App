@@ -5,8 +5,11 @@ import InfoBar from "./search_info_components/infoBar";
 import Card from "./cardComponent/card";
 
 export default class BoxViewContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   state = {
-    box: 10,
+    box: this.props.box,
     voters: [],
     votersAmount: 0,
     voted: 0
@@ -14,7 +17,7 @@ export default class BoxViewContainer extends React.Component {
   searchVoter = e => {
     // here should add the search query on e.target.value
     if (e.target.value) {
-      fetch(`/useronbox/voter/${e.target.value}`)
+      fetch(`/useronbox/voter/${e.target.value}/${this.state.box}`)
         .then(res => res.json())
         .then(voters => this.setState({ voters }));
       return;
@@ -36,6 +39,7 @@ export default class BoxViewContainer extends React.Component {
     this.setInfoBarVars();
   }
   render() {
+    console.log(this.props);
     return (
       <React.Fragment>
         <section className="flex-box">
@@ -43,6 +47,7 @@ export default class BoxViewContainer extends React.Component {
         </section>
         <section className="flex-box">
           <InfoBar
+            box={this.props.box}
             voted={this.state.voted}
             votersAmount={this.state.votersAmount}
           />
@@ -50,6 +55,7 @@ export default class BoxViewContainer extends React.Component {
         <section id="flexbox" className="flex-container">
           {this.state.voters.map(voter => (
             <Card
+              box={this.props.box}
               key={voter.id}
               id={voter.id}
               name={voter.full_name}

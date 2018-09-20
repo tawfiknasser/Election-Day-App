@@ -3,12 +3,18 @@ import { slide as Menu } from "react-burger-menu";
 import "./burgerMenu.css";
 
 export default class MainMenu extends React.Component {
+  logOut() {
+    document.cookie =
+      "election-app" + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    window.location.reload();
+  }
+
   render() {
     return (
       <React.Fragment>
         <Menu>
-          <a id="home" className="menu-item" href="/">
-            Home
+          <a id="Logout" onClick={this.logOut} className="menu-item" href="#">
+            Logout
           </a>
           <a id="about" className="menu-item" href="/">
             About
